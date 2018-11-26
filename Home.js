@@ -26,6 +26,11 @@ export default class Home extends React.Component {
   render() {
     let me = "leoneed";
     const { navigate } = this.props.navigation;
+    const { navigation } = this.props;
+    if (navigation) {
+      const suplied = navigation.getParam("item");
+      if (suplied) console.log(suplied);
+    }
     return (
       <View style={{ flex: 1, justifyContent: "space-between" }}>
         <View style={{ flex: 1 }} />
